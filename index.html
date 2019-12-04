@@ -27,11 +27,11 @@
 </style>
 </head>
 <body translate="no">
-<h1 id="mainTitle">To do list</h1>
-<ul class="firstlist">
+<h2 id="mainTitle">To do list</h2>
+<ul class="firstlist" id="firstlist">
 <li class="odd">Do Homework</li>
 <li class="even">Escape elohell</li>
-<li></li>
+<li>Do English/Science/Chinese/History Homework</li>
 <li>Cry Myself to Sleep</li>
 </ul>
 <button id="addItem">Add</button>
@@ -47,7 +47,7 @@ function doClick(e){
  const theValue = document.getElementById("theItem").value;
   console.log(theValue);
   var node = document.createElement("li");        
-var textnode = document.createTextNode("theValue");
+var textnode = document.createTextNode(theValue);
 node.appendChild(textnode);
 document.getElementById("firstlist").appendChild(node); 
 }
