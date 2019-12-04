@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 2002-1</title>
+<style>
+  #mainTitle{
+ font-size:150%; 
+  color:#FFAAFF; 
+}
+.odd{
+  background-color:rgba(200,200,200,.2) 
+}
+.even{
+  background-color:rgba(100,100,100,.2)
+}
+.myLists{
+ color:#FFAAFF;
+}
+#firstlist{
+  background-image: url("https://image.businessinsider.com/5452857ceab8ea170963f75c?width=1100&format=jpeg&auto=webp");
+    
+}
+</style>
+</head>
+<body translate="no">
+<h1 id="mainTitle">To do list</h1>
+<ul class="firstlist">
+<li class="odd">Do Homework</li>
+<li class="even">Escape elohell</li>
+<li></li>
+<li>Cry Myself to Sleep</li>
+</ul>
+<button id="addItem">Add</button>
+<input id="theItem">
+<script id="rendered-js">
+      console.clear();
+console.log('hello world')
+
+const addButton = document.getElementById("addItem")
+addButton.addEventListener('click',doClick);
+
+function doClick(e){
+ const theValue = document.getElementById("theItem").value;
+  console.log(theValue);
+  var node = document.createElement("li");        
+var textnode = document.createTextNode("theValue");
+node.appendChild(textnode);
+document.getElementById("firstlist").appendChild(node); 
+}
+    </script>
+</body>
+</html>
